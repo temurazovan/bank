@@ -112,16 +112,11 @@ void depositing(std::fstream &file, int money) {
 }
 
 int main() {
-    std::fstream file("../ATM.txt", std::ios::app | std::ios::in | std::ios::out);
-    std::ofstream ATM_state("../file.bin");
+    std::fstream file("../file.bin", std::ios::app | std::ios::in | std::ios::out);
     char input;
     int bills = 0;
     std::map<int, int> bank;
 
-    if (!std::filesystem::exists("../ATM.txt")) {
-        std::cout << "File not found";
-        return 0;
-    }
     if (!std::filesystem::exists("../file.bin")) {
         std::cout << "ATM data not saved \n";
         return 0;
@@ -167,7 +162,6 @@ int main() {
     }
 
     file.close();
-    ATM_state.close();
 
     return 0;
 }
