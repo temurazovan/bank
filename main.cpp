@@ -2,7 +2,6 @@
 #include <fstream>
 #include <vector>
 #include <map>
-#define MAX_BILLS 1000;
 
 const std::vector<int> g_denominations = {100, 200, 500, 1000, 2000, 5000};
 
@@ -161,6 +160,9 @@ int main() {
             }
             depositing(file, money);
             printBank(file, bills, bank);
+        }
+        if (input == '-') {
+
         }
     }
 
