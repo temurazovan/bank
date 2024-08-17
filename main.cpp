@@ -153,7 +153,7 @@ int main() {
             }
             std::cout << "Enter the amount to deposit:" << std::endl;
             while (std::cin >> money) {
-                if (money % 100 != 0 || money >= 5000000) {
+                if (money % 100 != 0 || money <= 0 || money >= 5000000) {
                     std::cout << "Money out of range" << std::endl;
                 } else {
                     break;
