@@ -157,7 +157,6 @@ int main() {
             printBank(file, bills, bank);
         }
         if (input == '-') {
-
         }
     }
 
